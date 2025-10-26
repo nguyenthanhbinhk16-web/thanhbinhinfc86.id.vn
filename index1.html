@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        /* Thiết lập chung và font chữ */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Phần Header - Logo và Tiêu đề */
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header-logo {
+            max-width: 80px;
+            height: auto;
+            margin-right: 15px;
+        }
+        
+        /* Đảm bảo tiêu đề và slogan nằm bên cạnh logo,
+           và nằm TRONG thẻ .header */
+        .header > div {
+            flex-grow: 1; /* Cho phép phần tiêu đề chiếm hết không gian còn lại */
+        }
+        
+        .header h1 {
+            color: #007bff;
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        .slogan {
+            color: #555;
+            font-style: italic;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Phần Giới thiệu */
+        .intro {
+            background-color: #e6f7ff;
+            border: 1px solid #b3e0ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .intro span:last-child {
+            display: block;
+            margin-top: 5px;
+            color: #333;
+        }
+        
+        .intro span:first-child {
+            font-size: 1.2em; /* Kích thước icon */
+            margin-right: 5px;
+        }
+
+
+        /* Phần Form Đăng ký */
+        .form-card {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-card h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+
+        /* Phần Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            font-size: 0.85em;
+            color: #777;
+        }
+
+        .contact-info span {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .copyright {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="Imgtag/11.png" class="header-logo"> 
+            <div>
+                <h1>Trung Tâm Ánh Sáng Toán Học</h1>
+                <p class="slogan">Học Toán dễ dàng - Tự tin chinh phục điểm cao!</p>
+            </div>
+        </div>
+
+        <div class="intro">
+            <span>💡</span>
+            <span>Khóa học Toán Tư duy & Giải đề dành cho học sinh phổ thông và ôn thi. Giúp bạn nắm vững kiến thức, phát triển tư duy logic và đạt kết quả tốt nhất.</span>
+        </div>
+
+        <div class="form-card">
+            <h2>Đăng ký nhập học</h2>
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="ho_ten">Họ và tên:</label>
+                    <input type="text" id="ho_ten" name="ho_ten" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="so_dien_thoai">Số điện thoại:</label>
+                    <input type="tel" id="so_dien_thoai" name="so_dien_thoai">
+                </div>
+
+                <div class="form-group">
+                    <label for="khoa_hoc">Chọn khóa học:</label>
+                    <select id="khoa_hoc" name="khoa_hoc" required>
+                        <option value="Toan_co_ban" selected>Toán học cơ bản</option>
+                        <option value="Toan_cap_2">Toán Lớp 6-9</option>
+                        <option value="Toan_cap_3">Toán Lớp 10-12</option>
+                        <option value="Toan_on_thi">Toán Ôn Thi Đại học</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ghi_chu">Ghi chú thêm:</label>
+                    <textarea id="ghi_chu" name="ghi_chu"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Gửi đăng ký</button>
+            </form>
+        </div>
+        
+        <div class="footer">
+            <p class="contact-info">
+                <span>📞 Hotline: 0379040693</span> | 
+                <span>✉️ nguyenthanhbinh.k16@stu.upt.edu.vn</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
